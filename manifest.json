@@ -3,6 +3,11 @@
   "version": "1.0",
   "manifest_version": 3,
   "description": "Displays CifraClub song sheets horizontally and provides additional UI enhancements.",
+  "icons": {
+    "16": "assets/cifraclub-betterui-icon.png",
+    "48": "assets/cifraclub-betterui-icon.png",
+    "128": "assets/cifraclub-betterui-icon.png"
+  },
   "content_scripts": [
     {
       "matches": ["*://*.cifraclub.com.br/*"],
