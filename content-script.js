@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
     .pages {
       display: flex;
       gap: 1rem;
-      margin: 0 1rem;
+      margin: 1rem;
       flex-wrap: wrap;
       justify-content: center;
     }
