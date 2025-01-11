@@ -35,6 +35,8 @@ Enhance your CifraClub experience with **CifraClub Better UI**, a Chrome extensi
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
+Don't forget to run `npm run build-zip` after every change to generate a new package and upload it to chrome web store developer dashboard.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).

@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Set output zip filename
-OUTPUT="cifraclub-betterui.zip"
+OUTPUT="./dist/cifraclub-betterui.zip"
+
+# Create the dist directory if it doesn't exist
+mkdir -p ./dist
 
 # Remove previous zip if it exists
 rm -f "$OUTPUT"
