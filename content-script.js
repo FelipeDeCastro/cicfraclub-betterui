@@ -1,6 +1,11 @@
 window.addEventListener('load', () => {
   console.log('CifraClub Better UI plugin loaded!');
 
+  // Remove "Cifra Club - " from the page title
+  const originalTitle = document.title;
+  const updatedTitle = originalTitle.replace(/^Cifra Club -\s*/, '');
+  document.title = updatedTitle;
+
   // Inject custom CSS for horizontal layout and hide elements by default
   const style = document.createElement('style');
   style.innerHTML = `
