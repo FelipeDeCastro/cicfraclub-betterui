@@ -4,6 +4,9 @@ window.addEventListener('load', () => {
   // Inject custom CSS for horizontal layout and hide elements by default
   const style = document.createElement('style');
   style.innerHTML = `
+    #side-menu {
+      right: 32px;
+    }
     .pages {
       display: flex;
       gap: 1rem;
@@ -13,6 +16,9 @@ window.addEventListener('load', () => {
     }
     .folha {
       margin: 0;
+    }
+    .cifra_acordes li {
+      margin: 18px 20px;
     }
 
   `;
@@ -26,10 +32,20 @@ window.addEventListener('load', () => {
     duasColunasCheckbox.checked = true;
     duasColunasCheckbox.dispatchEvent(new Event('change'));
   }
+
   if (tablaturasCheckbox) {
     tablaturasCheckbox.checked = false;
-    tablaturasCheckbox.dispatchEvent(new Event('change'));
-  }
+
+    const observer = new MutationObserver((mutations, obs) => {
+      const tablaturaExists = document.querySelector('.tablatura');
+      if (tablaturaExists) {
+        tablaturasCheckbox.dispatchEvent(new Event('change'));
+        obs.disconnect();
+      }
+    });
+  
+    observer.observe(document.body, { childList: true, subtree: true });
+  } 
 
   // Inject additional checkboxes
   const displayOptions = document.querySelector('#c-exibir ul');
@@ -51,7 +67,7 @@ window.addEventListener('load', () => {
       <i class="exib_conf"></i>
       <span class="inp_opt small">
         <input type="checkbox" name="configCifra" id="exib_configCifra" />
-        <label for="exib_configCifra">configurações da cifra</label>
+        <label for="exib_configCifra">tom e afinação</label>
       </span>
     `;
     displayOptions.appendChild(configCifraLi);
@@ -74,13 +90,14 @@ window.addEventListener('load', () => {
   const logoCheckbox = document.querySelector('#exib_logo');
 
   const compositorElement0 = document.querySelector('.compositor');
-  compositorElement0.style.display = 'none';
-
   const configCifraElement0 = document.querySelector('.cifra_config');
-  configCifraElement0.style.display = 'none';
-
   const logoElement0 = document.querySelector('.logo');
-  logoElement0.style.display = 'none';
+
+  if (configCifraElement0, configCifraElement0, logoElement0) {
+    compositorElement0.style.display = 'none';
+    configCifraElement0.style.display = 'none';
+    logoElement0.style.display = 'none';
+  }
 
   if (compositorCheckbox) {
     compositorCheckbox.checked = false;
