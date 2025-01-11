@@ -1,0 +1,13 @@
+{
+  "name": "cicfraclub-betterui",
+  "version": "1.0.0",
+  "description": "Enhance your CifraClub experience with **CifraClub Better UI**, a Chrome extension designed to improve the layout and usability of CifraClub song pages.",
+  "main": "content-script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-zip": "./build-zip.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
