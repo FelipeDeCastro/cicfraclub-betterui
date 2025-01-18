@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set output zip filename
-OUTPUT="./dist/cifraclub-betterui.zip"
+OUTPUT="./dist/cifraclub-betterui-v$NEW_VERSION.zip"
 
 # Create the dist directory if it doesn't exist
 mkdir -p ./dist
