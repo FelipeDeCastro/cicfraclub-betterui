@@ -1,6 +1,6 @@
 {
   "name": "CifraClub Better UI",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "manifest_version": 3,
   "description": "Displays CifraClub song sheets horizontally and provides additional UI enhancements.",
   "icons": {

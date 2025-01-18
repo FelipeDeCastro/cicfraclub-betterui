@@ -94,15 +94,14 @@ window.addEventListener('load', () => {
   const configCifraCheckbox = document.querySelector('#exib_configCifra');
   const logoCheckbox = document.querySelector('#exib_logo');
 
+  // Elements to hide or show
   const compositorElement0 = document.querySelector('.compositor');
   const configCifraElement0 = document.querySelector('.cifra_config');
   const logoElement0 = document.querySelector('.logo');
 
-  if (configCifraElement0, configCifraElement0, logoElement0) {
-    compositorElement0.style.display = 'none';
-    configCifraElement0.style.display = 'none';
-    logoElement0.style.display = 'none';
-  }
+  if (compositorElement0) compositorElement0.style.display = 'none';
+  if (configCifraElement0) configCifraElement0.style.display = 'none';
+  if (logoElement0) logoElement0.style.display = 'none';
 
   if (compositorCheckbox) {
     compositorCheckbox.checked = false;
