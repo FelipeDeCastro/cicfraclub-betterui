@@ -21,11 +21,19 @@ window.addEventListener('load', () => {
     }
     .folha {
       margin: 0;
+
     }
     .cifra_acordes li {
-      margin: 18px 20px;
+      margin: 10px 18px;
     }
-
+    .paginacao {
+      display: none;
+    }
+      .tam_a4 {
+        width: 210mm;
+        height: 290mm;
+      }
+    }
   `;
   document.head.appendChild(style);
 
@@ -132,4 +140,5 @@ window.addEventListener('load', () => {
       }
     });
   }
+
 });
